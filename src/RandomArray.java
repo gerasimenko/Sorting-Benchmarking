@@ -28,7 +28,6 @@ public class RandomArray {
                 arrayContainer[i] = Math.abs(randomGenerator.nextLong()) % range;
             }
         }
-
         return arrayContainer;
     }
 
