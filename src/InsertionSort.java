@@ -1,18 +1,25 @@
-/**
- * Created by IntelliJ IDEA.
- * User: mgerasimenko
- * Date: 8/12/11
- * Time: 2:13 PM
- * To change this template use File | Settings | File Templates.
- */
 public class InsertionSort {
 
-    public long[] sort(long[] array) {
+    public long[] sort(long[] a) {
 
-        return array;
+        for (int i = 1; i < a.length; i++) {
+            long key = a[i];
+            int j = i - 1;
+            while (j >= 0 && key < a[j]) {
+                a[j + 1] = a[j];
+                j--;
+            }
+            a[j + 1] = key;
+        }
+        return a;
     }
 
     public static void main(String[] args) {
+        RandomArray randomArray = new RandomArray(10, 100);
+        long[] test = randomArray.getRandomArray();
 
+        System.out.println(RandomArray.getStringPresentation(test));
+        test = new InsertionSort().sort(test);
+        System.out.println(RandomArray.getStringPresentation(test));
     }
 }
