@@ -9,9 +9,6 @@ public class Benchmarking {
         long[] sortedTestData = insertionSort.sort(testData);
         //System.out.println(RandomArray.getStringPresentation(sortedTestData));
 
-        System.out.println();
         System.out.println(insertionSort.getExecutionTime());
-
-
     }
 }
