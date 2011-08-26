@@ -13,7 +13,7 @@ public class Benchmarking {
 
 
     public static void main(String[] args) {
-        RandomArray randomArray = new RandomArray(10000, 20000);
+        RandomArray randomArray = new RandomArray(1000, 300000);
         long[] testData = randomArray.getRandomArray();
 
         ArrayList<AbstractSort> sortAlgorithms = new ArrayList<AbstractSort>();
