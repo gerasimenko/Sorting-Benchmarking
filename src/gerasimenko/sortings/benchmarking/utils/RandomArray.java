@@ -1,3 +1,5 @@
+package gerasimenko.sortings.benchmarking.utils;
+
 import java.util.Date;
 import java.util.Random;
 
