@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Benchmarking {
-    public static final int ARRAY_SIZE = 50000;
+    public static final int ARRAY_SIZE = 1000000;
     public static final int RANGE = 300000;
 
     public static void main(String[] args) {
@@ -19,12 +19,15 @@ public class Benchmarking {
 //        long[] testRandomData = arrayGenerator.getNonIncreasingArray();
 
         ArrayList<AbstractSort> sortAlgorithms = new ArrayList<AbstractSort>();
+/*
         sortAlgorithms.add(new InsertionSort());
         sortAlgorithms.add(new SelectionSort());
         sortAlgorithms.add(new BubbleSort());
+*/
         sortAlgorithms.add(new MergeSortRecursive());
         sortAlgorithms.add(new MergeSortNonRecursive());
         sortAlgorithms.add(new HeapSort());
+        sortAlgorithms.add(new QuickSort());
         sortAlgorithms.add(new JavaSDKSort());
 
 //        System.out.println(ArrayGenerator.getStringPresentation(testRandomData));
@@ -49,7 +52,6 @@ public class Benchmarking {
     }
 
     public static void heatUp() {
-        ArrayGenerator arrayGenerator = new ArrayGenerator(100000, RANGE);
         new MergeSortRecursive().sort(new ArrayGenerator(1000000, RANGE).getRandomArray());
     }
 
